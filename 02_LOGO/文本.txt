@@ -1,3 +1,0 @@
-Project : Cerberus_P&S_V01
-Funtion : Supply Power & Drive Servo
-By Connor.Chen
