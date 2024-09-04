@@ -8,7 +8,7 @@
 #ifndef __LIS_H_
 #define __LIS_H_
  
- 
+ //VSCODE GIT TEST
 /* #ifdef   LIS2MDL_MOUDLE
 #define   
 #else
