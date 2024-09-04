@@ -33,7 +33,7 @@
  
 #define LIS2MDL_ADDR_XOUTL                        0x68
 #define LIS2MDL_ADDR_XOUTH                        0x69
-#define LIS2MDL_ADDR_YOUTHL                       0x6A
+#define LIS2MDL_ADDR_YOUTL                       0x6A
 #define LIS2MDL_ADDR_YOUTH                        0x6B
 #define LIS2MDL_ADDR_ZOUTL                        0x6C
 #define LIS2MDL_ADDR_ZOUTH                        0x6D

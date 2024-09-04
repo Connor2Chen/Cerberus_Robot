@@ -34,6 +34,8 @@ extern "C" {
 
 #define int16_t signed short
 #define uint16_t unsigned short
+#define int8_t signed char
+#define uint8_t unsigned char
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
