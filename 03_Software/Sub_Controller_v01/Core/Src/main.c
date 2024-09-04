@@ -112,7 +112,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    printf("Hello!!! Mother Fucking World!"); //用于副控板烧录是否成功；
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
