@@ -1,10 +1,12 @@
-
-
 /*
- * *@Last_Author  : Connor.C
- * *@since        : 2024-09-05 08:41:23
- * *@message      : The function of this file is 
- * *@文件相对于项目的路径   : /03_Software/Sub_Controller_v01/connor/pre/lis/lis.c
+ * @Author: Connor2Chen 397080067@qq.com
+ * @Date: 2024-09-05 08:41:23
+ * @LastEditors: Connor2Chen 397080067@qq.com
+ * @LastEditTime: 2024-09-05 10:55:35
+ * @FilePath: \03_Software\Sub_Controller_v01\connor\pre\lis\lis.c
+ * @Description: 
+ * 
+ * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved. 
  */
 
 
@@ -16,15 +18,11 @@
 
 
 /**
- * *@@              : //-----------------------------------------------------------------------------------------------------------
- * *@Function       : LIS2MDL I2C写寄存器
- * *@since          : 2024-08-23 17:25:14
- * *@Param          : 
- * *@Return         : 
- * *@Statement      : 
- * *@@@             : //----------------------------------------------------------------------------------------------------------
- * *@Input           {uint8_t} reg_addr
- * *@Input           {uint8_t} data
+ * @description: LIS2MDL 写寄存器
+ * @Date: 2024-09-05 10:52:25
+ * @param {uint8_t} reg_addr
+ * @param {uint8_t} data
+ * @return {*}
  */
 void LIS2MDL_Register_Write(uint8_t reg_addr, uint8_t data)
 {
@@ -39,16 +37,12 @@ void LIS2MDL_Register_Write(uint8_t reg_addr, uint8_t data)
 
 
 /**
- * *@@              : //-----------------------------------------------------------------------------------------------------------
- * *@Function       : LIS2MDL I2C 寄存器读函数
- * *@since          : 2024-08-23 17:33:05
- * *@Param          : 
- * *@Return         : 
- * *@Statement      : 
- * *@@@             : //----------------------------------------------------------------------------------------------------------
- * *@Input           {uint8_t} reg_add
- * *@Input           {unsigned char*} read
- * *@Input           {uint8_t} num
+ * @description: LIS2MDL 读寄存器
+ * @Date: 2024-09-05 10:52:48
+ * @param {uint8_t} reg_add
+ * @param {unsigned char*} read
+ * @param {uint8_t} num
+ * @return {*}
  */
 void LIS2MDL_Register_Read(uint8_t reg_add, unsigned char* read, uint8_t num)
 {
@@ -67,15 +61,10 @@ void LIS2MDL_Register_Read(uint8_t reg_add, unsigned char* read, uint8_t num)
 }
 
 
-
 /**
- * *@@              : //-----------------------------------------------------------------------------------------------------------
- * *@Function       :  LIS2MDL初始化
- * *@since          : 2024-09-05 08:42:44
- * *@Param          : 
- * *@Return         : 
- * *@Statement      : 
- * *@@@             : //----------------------------------------------------------------------------------------------------------
+ * @description:  LIS2MDL 初始化
+ * @Date: 2024-09-05 10:53:12
+ * @return {*}
  */
 void LIS2MDL_Init(void)
 {
@@ -94,13 +83,9 @@ void LIS2MDL_Init(void)
 
 
 /**
- * *@@              : //-----------------------------------------------------------------------------------------------------------
- * *@Function       :  LIS2MDL 软件复位
- * *@since          : 2024-09-05 08:43:03
- * *@Param          : 
- * *@Return         : 
- * *@Statement      : 
- * *@@@             : //----------------------------------------------------------------------------------------------------------
+ * @description: LIS2MDL 软件复位
+ * @Date: 2024-09-05 10:53:50
+ * @return {*}
  */
 void LIS2MDL_Soft_Reset(void)
 {
@@ -117,16 +102,12 @@ void LIS2MDL_Soft_Reset(void)
 
 
 /**
- * *@@              : //-----------------------------------------------------------------------------------------------------------
- * *@Function       :  LIS2MDL 获取三轴磁力
- * *@since          : 2024-09-05 08:43:23
- * *@Param          : 
- * *@Return         : 
- * *@Statement      : 
- * *@@@             : //----------------------------------------------------------------------------------------------------------
- * *@Input           {int16_t} *magData_x
- * *@Input           {int16_t} *magData_y
- * *@Input           {int16_t} *magData_z
+ * @description: LIS2MDL 获取三轴磁力
+ * @Date: 2024-09-05 10:54:10
+ * @param {int16_t} *magData_x
+ * @param {int16_t} *magData_y
+ * @param {int16_t} *magData_z
+ * @return {*}
  */
 void LIS2MDL_Read_MagDensity(int16_t *magData_x, int16_t *magData_y, int16_t *magData_z)
 {
@@ -146,13 +127,9 @@ void LIS2MDL_Read_MagDensity(int16_t *magData_x, int16_t *magData_y, int16_t *ma
 
 
 /**
- * *@@              : //-----------------------------------------------------------------------------------------------------------
- * *@Function       :  LIS2MDL 读取温度
- * *@since          : 2024-09-05 08:43:53
- * *@Param          : 
- * *@Return         : 
- * *@Statement      : 
- * *@@@             : //----------------------------------------------------------------------------------------------------------
+ * @description: LIS2MDL 读取温度
+ * @Date: 2024-09-05 10:54:31
+ * @return {*}
  */
 int16_t LIS2MDL_Read_TEMP(void)
 {
@@ -164,16 +141,12 @@ int16_t LIS2MDL_Read_TEMP(void)
 
 
 /**
- * *@@              : //-----------------------------------------------------------------------------------------------------------
- * *@Function       :  LIS2MDL 读取偏移量
- * *@since          : 2024-09-05 08:44:10
- * *@Param          : 
- * *@Return         : 
- * *@Statement      : 
- * *@@@             : //----------------------------------------------------------------------------------------------------------
- * *@Input           {int16_t} *offset_x
- * *@Input           {int16_t} *offset_y
- * *@Input           {int16_t} *offset_z
+ * @description: LIS2MDL 读取偏移
+ * @Date: 2024-09-05 10:54:47
+ * @param {int16_t} *offset_x
+ * @param {int16_t} *offset_y
+ * @param {int16_t} *offset_z
+ * @return {*}
  */
 void LIS2MDL_Read_Offset(int16_t *offset_x, int16_t *offset_y, int16_t *offset_z)
 {
@@ -193,16 +166,12 @@ void LIS2MDL_Read_Offset(int16_t *offset_x, int16_t *offset_y, int16_t *offset_z
 
 
 /**
- * *@@              : //-----------------------------------------------------------------------------------------------------------
- * *@Function       :  LIS2MDL 修改偏移
- * *@since          : 2024-09-05 08:44:34
- * *@Param          : 
- * *@Return         : 
- * *@Statement      : 
- * *@@@             : //----------------------------------------------------------------------------------------------------------
- * *@Input           {int16_t} *offset_x
- * *@Input           {int16_t} *offset_y
- * *@Input           {int16_t} *offset_z
+ * @description: LIS2MDL 修改偏移
+ * @Date: 2024-09-05 10:55:07
+ * @param {int16_t} *offset_x
+ * @param {int16_t} *offset_y
+ * @param {int16_t} *offset_z
+ * @return {*}
  */
 void LIS2MDL_Write_Offset(int16_t *offset_x, int16_t *offset_y, int16_t *offset_z)
 {
@@ -237,13 +206,9 @@ void LIS2MDL_Write_Offset(int16_t *offset_x, int16_t *offset_y, int16_t *offset_
 
 
 /**
- * *@@              : //-----------------------------------------------------------------------------------------------------------
- * *@Function       :  LIS2MDL 清除偏移
- * *@since          : 2024-09-05 08:44:57
- * *@Param          : 
- * *@Return         : 
- * *@Statement      : 
- * *@@@             : //----------------------------------------------------------------------------------------------------------
+ * @description: LIS2MDL 清除偏移量
+ * @Date: 2024-09-05 10:55:21
+ * @return {*}
  */
 void LIS2MDL_Clean_Offset(void)
 {
@@ -257,14 +222,10 @@ void LIS2MDL_Clean_Offset(void)
 
 
 /**
- * *@@              : //-----------------------------------------------------------------------------------------------------------
- * *@Function       :  LIS2MDL 等待数据更新
- * *@since          : 2024-09-05 08:45:15
- * *@Param          : 
- * *@Return         : 
- * *@Statement      : 
- * *@@@             : //----------------------------------------------------------------------------------------------------------
- * *@Input           {uint8_t} max_cnt
+ * @description: LIS2MDL 等待数据更新
+ * @Date: 2024-09-05 10:55:40
+ * @param {uint8_t} max_cnt
+ * @return {*}
  */
 bool LIS2MDL_Wait_Data_Update(uint8_t max_cnt)
 {
