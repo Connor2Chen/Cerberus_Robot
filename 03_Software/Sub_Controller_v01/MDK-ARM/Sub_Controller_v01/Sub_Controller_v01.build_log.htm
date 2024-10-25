@@ -3,61 +3,158 @@
 <pre>
 <h1>�Vision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ��Vision V5.39.0.0
-Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: 1 Connor, 1, LIC=GMZI6-DA3XP-HLRCL-09XXX-7RG7V-BEX1Z
+IDE-Version: ��Vision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: z x, c, LIC=JL28G-VH1PT-30ENC-78XC2-BLK27-R4CRA
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.39.0.0
+Toolchain:       MDK-ARM Plus  Version: 5.24.1
 Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.05 update 1 (build 106)
-Assembler:       Armasm.exe V5.05 update 1 (build 106)
-Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
-Library Manager: ArmAr.exe V5.05 update 1 (build 106)
-Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
-CPU DLL:         SARMCM3.DLL V5.39.0.0
-Dialog DLL:      DCM.DLL V1.17.5.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
-Dialog DLL:      TCM.DLL V1.56.4.0
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.32.0.0
  
 <h2>Project:</h2>
-F:\01_Cerberus\03_Software\Sub_Controller_v01\MDK-ARM\Sub_Controller_v01.uvprojx
-Project File Date:  08/21/2024
+F:\Cerberus_Robot\03_Software\Sub_Controller_v01\MDK-ARM\Sub_Controller_v01.uvprojx
+Project File Date:  10/20/2024
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.05 update 1 (build 106)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
-Build target 'Sub_Controller_v01'
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Sub_Controller_v01'
+assembling startup_stm32f407xx.s...
+compiling gpio.c...
+compiling sdio.c...
+compiling spi.c...
+compiling fsmc.c...
+compiling tim.c...
+compiling stm32f4xx_it.c...
+compiling i2c.c...
+compiling adc.c...
+compiling main.c...
+../Core/Src/main.c(115): warning:  #223-D: function "printf" declared implicitly
+      printf("Hello!!! Mother Fucking World!"); //用于副控板烧录是否成功；
+../Core/Src/main.c: 1 warning, 0 errors
+compiling usart.c...
+compiling stm32f4xx_hal_msp.c...
+compiling stm32f4xx_ll_adc.c...
+compiling stm32f4xx_hal_flash_ramfunc.c...
+compiling stm32f4xx_hal_rcc_ex.c...
+compiling stm32f4xx_hal_flash_ex.c...
+compiling stm32f4xx_hal_flash.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal_adc.c...
+compiling stm32f4xx_hal_adc_ex.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling stm32f4xx_hal_dma.c...
+compiling stm32f4xx_hal_dma_ex.c...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_i2c_ex.c...
+compiling stm32f4xx_hal_exti.c...
+compiling stm32f4xx_ll_fsmc.c...
+compiling stm32f4xx_hal_sram.c...
+compiling stm32f4xx_ll_sdmmc.c...
+compiling system_stm32f4xx.c...
+compiling stm32f4xx_hal_sd.c...
 compiling lis.c...
-..\connor\pre\lis\lis.c(13): warning:  #177-D: variable "LIS2MDLSample" was declared but never referenced
-  static LIS2MDL_SAMPLE_DEF       LIS2MDLSample;
-..\connor\pre\lis\lis.c: 1 warning, 0 errors
-linking...
-Program Size: Code=11374 RO-data=450 RW-data=24 ZI-data=1912  
-FromELF: creating hex file...
-"Sub_Controller_v01\Sub_Controller_v01.axf" - 0 Error(s), 1 Warning(s).
+..\connor\pre\lis\lis.c(47): error:  #147: declaration is incompatible with "unsigned char LIS2MDL_Register_Read(unsigned char, unsigned char)"  (declared at line 176 of "..\connor\pre\lis\lis.h")
+  void LIS2MDL_Register_Read(uint8_t reg_add, unsigned char* read, uint8_t num)
+..\connor\pre\lis\lis.c(69): error:  #147: declaration is incompatible with "_Bool LIS2MDL_Init(void)"  (declared at line 165 of "..\connor\pre\lis\lis.h")
+  void LIS2MDL_Init(void)
+..\connor\pre\lis\lis.c(75): error:  #144: a value of type "char *" cannot be used to initialize an entity of type "char"
+          char error = "LIS2MDL CHIPID VALUE ERROR !!!";
+..\connor\pre\lis\lis.c(76): warning:  #181-D: argument is incompatible with corresponding format string conversion
+          printf("%s\n",error);
+..\connor\pre\lis\lis.c(79): error:  #20: identifier "LIS2MDL_CFGA_MoDE_IDLE" is undefined
+      LIS2MDL_Register_Write(
+IS2MDL_ADDR_CFGA,
+IS2MDL_CFGA_VALUE_IDLE);
+..\connor\pre\lis\lis.c(112): error:  #147: declaration is incompatible with "LIS2MDL_RESULT_SAMPLE LIS2MDL_Read_MagDensity(void)"  (declared at line 169 of "..\connor\pre\lis\lis.h")
+  void LIS2MDL_Read_MagDensity(int16_t *magData_x, int16_t *magData_y, int16_t *magData_z)
+..\connor\pre\lis\lis.c(114): warning:  #520-D: initialization with "{...}" expected for aggregate object
+      
+int8_t rawData_x[2] = 0;
+..\connor\pre\lis\lis.c(115): warning:  #520-D: initialization with "{...}" expected for aggregate object
+      
+int8_t rawData_y[2] = 0;
+..\connor\pre\lis\lis.c(116): warning:  #520-D: initialization with "{...}" expected for aggregate object
+      
+int8_t rawData_z[2] = 0;
+..\connor\pre\lis\lis.c(118): warning:  #175-D: subscript out of range
+      LIS2MDL_Register_Read(
+IS2MDL_ADDR_XOUTL, rawData_x[2], 2);
+..\connor\pre\lis\lis.c(118): error:  #167: argument of type "unsigned char" is incompatible with parameter of type "unsigned char *"
+      LIS2MDL_Register_Read(
+IS2MDL_ADDR_XOUTL, rawData_x[2], 2);
+..\connor\pre\lis\lis.c(119): warning:  #175-D: subscript out of range
+      LIS2MDL_Register_Read(
+IS2MDL_ADDR_YOUTL, rawData_y[2], 2);
+..\connor\pre\lis\lis.c(119): error:  #167: argument of type "unsigned char" is incompatible with parameter of type "unsigned char *"
+      LIS2MDL_Register_Read(
+IS2MDL_ADDR_YOUTL, rawData_y[2], 2);
+..\connor\pre\lis\lis.c(120): warning:  #175-D: subscript out of range
+      LIS2MDL_Register_Read(
+IS2MDL_ADDR_ZOUTL, rawData_z[2], 2);
+..\connor\pre\lis\lis.c(120): error:  #167: argument of type "unsigned char" is incompatible with parameter of type "unsigned char *"
+      LIS2MDL_Register_Read(
+IS2MDL_ADDR_ZOUTL, rawData_z[2], 2);
+..\connor\pre\lis\lis.c(134): error:  #147: declaration is incompatible with "void LIS2MDL_Read_TEMP(signed short *)"  (declared at line 184 of "..\connor\pre\lis\lis.h")
+  int16_t LIS2MDL_Read_TEMP(void)
+..\connor\pre\lis\lis.c(153): warning:  #520-D: initialization with "{...}" expected for aggregate object
+      
+int8_t rawData_x[2] = 0;
+..\connor\pre\lis\lis.c(154): warning:  #520-D: initialization with "{...}" expected for aggregate object
+      
+int8_t rawData_y[2] = 0;
+..\connor\pre\lis\lis.c(155): warning:  #520-D: initialization with "{...}" expected for aggregate object
+      
+int8_t rawData_z[2] = 0;
+..\connor\pre\lis\lis.c(176): error:  #147-D: declaration is incompatible with "void LIS2MDL_Write_Offset(signed short, signed short, signed short)"  (declared at line 180 of "..\connor\pre\lis\lis.h")
+  void LIS2MDL_Write_Offset(int16_t *offset_x, int16_t *offset_y, int16_t *offset_z)
+..\connor\pre\lis\lis.c(232): warning:  #186-D: pointless comparison of unsigned integer with zero
+      for(; max_cnt>=0 ; max_cnt--)
+..\connor\pre\lis\lis.c: 11 warnings, 10 errors
+compiling servo.c...
+compiling pca9685.c...
+compiling mpu6050.c...
+compiling stm32f4xx_hal_spi.c...
+compiling stm32f4xx_hal_tim_ex.c...
+compiling stm32f4xx_hal_uart.c...
+compiling stm32f4xx_hal_i2c.c...
+compiling stm32f4xx_hal_tim.c...
+"Sub_Controller_v01\Sub_Controller_v01.axf" - 10 Error(s), 12 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
-                ARM::CMSIS@5.9.0
-                CMSIS (Common Microcontroller Software Interface Standard)
-   * Component: CORE Version: 5.6.0
+                http://www.keil.com/pack/ARM.CMSIS.5.0.1.pack
+                ARM.CMSIS.5.0.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.0.1
 
 Package Vendor: Keil
                 https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
-                Keil::STM32F4xx_DFP@2.17.1
+                Keil.STM32F4xx_DFP.2.17.1
                 STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
 
 <h2>Collection of Component include folders:</h2>
-  ./RTE/_Sub_Controller_v01
-  D:/Keil_v5/ARM/Pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include
-  D:/Keil_v5/ARM/Pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  .\RTE\_Sub_Controller_v01
+  D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include
+  D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE@5.6.0
-Build Time Elapsed:  00:00:06
+   * Component: ARM::CMSIS:CORE:5.0.1
+Target not created.
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
